@@ -40,9 +40,7 @@ def benchmark(s, algorithm): # (bytes, bytes)
     print("\tPy PoW: time = {} usec".format((end - begin).microseconds))
 
 
-benchmark(b"abcd", b"sha1")
-benchmark(b"abcd", b"sha256")
-benchmark(b"abcd", b"md5")
-benchmark(b"dead", b"sha1")
-benchmark(b"dead", b"sha256")
-benchmark(b"dead", b"md5")
+algorithms = [b"sha1", b"sha256", b"sha224", b"sha384", b"sha512", b"md5"]
+for algorithm in algorithms:
+    benchmark(b"dead", algorithm)
+    benchmark(b"beef", algorithm)
