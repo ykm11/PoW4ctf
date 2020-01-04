@@ -4,6 +4,7 @@ md5, sha1, sha224, sha256, sha384, sha512に対応しています。
 
 <br />
 ## 使い方  
+
 ビルドしたらpythonから呼び出せるようになります。  
 > go build -o libPoW.so -buildmode=c-shared proof_of_work.go
 
