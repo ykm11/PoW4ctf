@@ -24,21 +24,20 @@ binascii.hexlify(hashlib.sha1(b'aGPG').digest())
 
 # Benchmark
 
-> macOS  
-> Processor 2.6 GHz Intel Core i7  
-> Memory 16 GB 2400 MHz DDR4  
+> vagrant/Ubuntu on macOS  
+> Intel(R) Core(TM) i7-8850H CPU @ 2.60GHz 
 
-| target |algorithm | Time Go [usec]  | Time Py [usec] |
+| target |algorithm | Time Golang [usec]  | Time Python [usec] |
 |---|---|---|---|
-| dead  | sha1  | 9771  | 96973  |
-|   | sha256  | 19800 | 261932 |
-|   | sha224  | 52616 | 681575 |
-|   | sha384  | 113460  | 349599 |
-|   | sha512  | 124306 |  455819 |
-| | md5  | 29590 | 456840|
-| beef  | sha1  | 40518  | 571753  |
-|   | sha256  | 81564  | 54642 |
-|   | sha224  | 25631  | 348169 |
-|  | sha384  | 20159 | 215599 |
-|  | sha512  | 36488 | 373933|
-|  | md5  | 4576 |81304 |
+| dead  | sha1  | 8432  | 66340  |
+|   | sha256  | 22816 | 148757 |
+|   | sha224  | 60152 | 382477 |
+|   | sha384  | 128164  | 747094 |
+|   | sha512  | 144254 |  820544 |
+| | md5  | 31199 | 269180 |
+| beef  | sha1  | 39560  | 322154  |
+|   | sha256  | 92983  | 606330 |
+|   | sha224  | 30014  | 202007 |
+|  | sha384  | 21930 | 123751 |
+|  | sha512  | 40111 | 218024 |
+|  | md5  | 4857 | 48344 |
