@@ -24,9 +24,9 @@ binascii.hexlify(hashlib.sha1(b'aGPG').digest())
 
 # Benchmark
 
-> macOS 
-> Processor 2.6 GHz Intel Core i7
-> Memory 16 GB 2400 MHz DDR4
+> macOS  
+> Processor 2.6 GHz Intel Core i7  
+> Memory 16 GB 2400 MHz DDR4  
 
 | target |algorithm | Time Go [usec]  | Time Py [usec] |
 |---|---|---|---|
