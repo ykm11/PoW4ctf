@@ -44,6 +44,7 @@ func GetHash(val, algorithm string) []byte {
 //export PoW
 func PoW(target, algorthm *C.char) *C.char {
     var str, hashString string
+    var tmp string
     for _, ch1  := range(chars) {
         for _, ch2  := range(chars) {
             for _, ch3  := range(chars) {
@@ -51,7 +52,7 @@ func PoW(target, algorthm *C.char) *C.char {
                     str = fmt.Sprintf("%s%s%s%s",
                         string(ch1), string(ch2), string(ch3), string(ch4))
                     hashString = fmt.Sprintf("%x", GetHash(str, C.GoString(algorthm)))
-                    tmp := hashString[len(hashString)-len(C.GoString(target)):]
+                    tmp = hashString[len(hashString)-len(C.GoString(target)):]
                     if strings.Compare(tmp, C.GoString(target)) == 0 {
                         return C.CString(str)
                     }
